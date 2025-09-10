@@ -3,8 +3,8 @@ import Bootloader from "./scenes/bootloader";
 import Outro from "./scenes/outro";
 import Splash from "./scenes/splash";
 import Transition from "./scenes/transition";
-import MainGame from "./scenes/game";
-import { AUTO, Game } from "phaser";
+import Game from "./scenes/game";
+import { AUTO, Game as PhaserGame } from "phaser";
 
 //  Find out more information about the Game Config at:
 //  https://docs.phaser.io/api-documentation/typedef/types-core#gameconfig
@@ -24,13 +24,13 @@ const config = {
       debug: false,
     },
   },
-  scene: [Bootloader, Splash, Transition, MainGame, Outro],
+  scene: [Bootloader, Splash, Transition, Game, Outro],
 };
 
 
 
 const StartGame = (parent) => {
-  return new Game({ ...config, parent });
+  return new PhaserGame({ ...config, parent });
 };
 
 export default StartGame;
