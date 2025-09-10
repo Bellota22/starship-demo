@@ -1,35 +1,36 @@
-import { Boot } from './scenes/Boot';
-import { Game as MainGame } from './scenes/Game';
-import { GameOver } from './scenes/GameOver';
-import { MainMenu } from './scenes/MainMenu';
-import { Preloader } from './scenes/Preloader';
-import { AUTO, Game } from 'phaser';
+import Phaser from "phaser";
+import Bootloader from "./scenes/bootloader";
+import Outro from "./scenes/outro";
+import Splash from "./scenes/splash";
+import Transition from "./scenes/transition";
+import MainGame from "./scenes/game";
+import { AUTO, Game } from "phaser";
 
 //  Find out more information about the Game Config at:
 //  https://docs.phaser.io/api-documentation/typedef/types-core#gameconfig
 const config = {
-    type: AUTO,
-    width: 1024,
-    height: 768,
-    parent: 'game-container',
-    backgroundColor: '#028af8',
-    scale: {
-        mode: Phaser.Scale.FIT,
-        autoCenter: Phaser.Scale.CENTER_BOTH
+  width: 1000,
+  height: 800,
+  scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+  },
+  autoRound: false,
+  parent: "contenedor",
+  physics: {
+    default: "arcade",
+    arcade: {
+      gravity: { y: 0 },
+      debug: false,
     },
-    scene: [
-        Boot,
-        Preloader,
-        MainMenu,
-        MainGame,
-        GameOver
-    ]
+  },
+  scene: [Bootloader, Splash, Transition, MainGame, Outro],
 };
 
+
+
 const StartGame = (parent) => {
-
-    return new Game({ ...config, parent });
-
-}
+  return new Game({ ...config, parent });
+};
 
 export default StartGame;
