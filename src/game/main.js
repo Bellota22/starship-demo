@@ -1,9 +1,9 @@
 import Phaser from "phaser";
-import Bootloader from "./scenes/bootloader";
-import Outro from "./scenes/outro";
-import Splash from "./scenes/splash";
-import Transition from "./scenes/transition";
-import Game from "./scenes/game";
+import Bootloader from "./scenes/Bootloader";
+import Outro from "./scenes/Outro";
+import Splash from "./scenes/Splash";
+import Transition from "./scenes/Transition";
+import Game from "./scenes/Game";
 import { AUTO, Game as PhaserGame } from "phaser";
 
 //  Find out more information about the Game Config at:
