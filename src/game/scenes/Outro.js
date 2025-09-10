@@ -12,11 +12,11 @@ export default class Outro extends Phaser.Scene {
     this.splashLayer = this.add.layer();
     this.text = [
       "Score: " + this.registry.get("score_player1"),
-      "The evil forces among with",
-      "their tyrannical leader GUINXU",
-      "were finally wiped out.",
-      "Thanks to commander Alva",
-      "And the powah of the Plenny Shakes",
+      "Las fuerzas malvadas de",
+      "su malvado lider BELLOTA",
+      "fueron aniquiladas.",
+      "Gracias comandante VIEJITA",
+      "y el poder de la amistad.",
       " - press enter - ",
     ];
     this.showHistory();
