@@ -1,3 +1,4 @@
+// src/game/main.js
 import Phaser from "phaser";
 import Bootloader from "./scenes/Bootloader";
 import Outro from "./scenes/Outro";
